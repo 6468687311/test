@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>(已完成）
+    <meta charset="UTF-8">
+    <title>3D变换</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .box {
+            position: absolute;
+            top:100px;
+            left: 300px;
+            line-height: 100px;
+            /*3d效果*/
+            transform-style: preserve-3d;
+            /*舞台*/
+            perspective: 1300px;
+            /*transform: rotateX(80deg) rotateY(80deg) ;*/
+            animation: xuanzhuan 3s alternate  linear infinite;
+            transition: all 3s linear ;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+        }
+        .box div{
+            text-align:center;
+            /*定位*/
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        /*单个面放大*/
+        .box :hover div:nth-of-type(1){
+            transform: rotateX(90deg) translateZ(100px);
+        }
+        /*.box :hover div:nth-of-type(2){*/
+        /*    transform: rotateX(-90deg) translateZ(100px);*/
+        /*}*/
+        /*.box :hover div:nth-of-type(3){*/
+        /*    transform: rotateY(90deg) translateZ(100px);*/
+        /*}*/
+        /*.box :hover div:nth-of-type(4){*/
+        /*    transform: rotateY(90deg) translateZ(100px);*/
+        /*}*/
+        /*.box :hover div:nth-of-type(5){*/
+        /*    transform: rotateY(-90deg) translateZ(100px);*/
+        /*}*/
+        /*.box :hover div:nth-of-type(6){*/
+        /*    transform: rotateY(90deg) translateZ(100px);*/
+        /*}*/
+        /*上面*/
+        .top{
+            background-color:rgba(233,220,81,0.8);
+            transform: rotateX(90deg) translateZ(50px);
+        }
+        /*下面*/
+        .below{
+            background-color:rgba(102,102,102,0.8);
+            transform: rotateX(-90deg) translateZ(50px);
+        }
+        /*左面*/
+        .left{
+            background-color:rgba(93,233,48,0.8);
+            transform:rotateY(-90deg) translateZ(50px);
+        }/*右面*/
+        .right{
+            background-color:rgba(88,144,233,0.8);
+            transform:rotateY(90deg) translateZ(50px);
+        }
+        /*前面*/
+        .front{
+            background-color: rgba(175, 39, 233, 0.8);
+            transform: translateZ(50px) ;
+        }
+        /*后面*/
+        .back{
+            background-color: rgba(40, 51, 233, 0.8);
+            transform:rotateY(180deg) translateZ(50px) ;
+        }
+        /*.box:hover{*/
+        /*    transform: rotateX(20deg) rotateY(20deg) ;*/
+        /*}*/
+        /*动画*/
+        @keyframes xuanzhuan {
+            0% {
+                transform: rotateX(20deg) rotateY(20deg) rotateZ(20deg)
+            translateX(20px) translateY(20px) translateZ(20px);
+            }
+            100% {
+                transform: rotateX(360deg)rotateY(360deg) rotateZ(360deg);
+            translateX(120px) translateY(120px) translateZ(120px);
+            }
+        }
+    </style>
+</head>
+<div class="box">
+    <div class="top">上面</div>
+    <div class="below">下面</div>
+    <div class="left">左面</div>
+    <div class="right">右面</div>
+    <div class="front">前面</div>
+    <div class="back">后面</div>
+</div>
+<div>
+   </div>
+</body>
+</html>

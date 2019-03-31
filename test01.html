@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>                      (已完成）
+    <meta charset="UTF-8">
+    <title>精灵图</title>
+    <style>
+        span{
+            display: block;
+            width: 24px;
+            height: 24px;
+            margin: 10px auto;
+            background-image:url("img/12.png");
+        }
+        .box{
+            width: 300px;
+            margin: 20px auto;
+        }
+        p{
+            font-size: 12px;
+            text-align: center;
+        }
+        ul{
+            width: 300px;
+            list-style: none;
+        }
+        li{
+            float: left;
+            width: 70px;
+            height:65px;
+            border: 1px solid #cc0000;
+            /**清除重叠线*/
+            margin:0px  -1px -1px 0px;
+        }
+        li:nth-of-type(n) span{
+            background-position-y: -45px;}
+        </style>
+</head>
+<body>
+<div class="box">
+    <ul>
+        <li>
+            <span></span>
+            <p>充话费</p>
+        </li>
+        <li>
+            <span></span>
+            <p>旅行</p>
+        </li>
+        <li>
+            <span></span>
+            <p>车险</p>
+        </li>
+        <li>
+            <span></span>
+            <p>游戏</p>
+        </li>
+        <li>
+            <span></span>
+            <p>彩票</p>
+        </li>
+        <li>
+            <span></span>
+            <p>电影</p>
+        </li>
+        <li>
+            <span></span>
+            <p>酒店</p>
+        </li>
+        <li>
+            <span></span>
+            <p>理财</p>
+        </li>
+        <li>
+            <span></span>
+            <p>找服务</p>
+        </li>
+        <li>
+            <span></span>
+            <p>演出</p>
+        </li>
+        <li>
+            <span></span>
+            <p>水电煤</p>
+        </li>
+        <li>
+            <span></span>
+            <p>火车票</p>
+        </li>
+    </ul>
+</div>
+<script>
+    var span=document.querySelectorAll('span');
+    for(var i=0;i<span.length;i++){
+        span [i].style.backgroundPositionY=-44*i+'px';
+    }
+</script>
+</body>
+</html>
